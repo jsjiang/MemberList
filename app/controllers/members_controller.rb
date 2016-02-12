@@ -5,7 +5,9 @@ class MembersController < ApplicationController
     end 
     
     def create
-        @member = Member.create( memeber_params )
+        @member = Member.create( member_params )
+        
+        redirect_to "/members"
     end
 
 private
